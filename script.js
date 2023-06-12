@@ -7,32 +7,43 @@ function getComputerChoice() {
     
 }
 console.log(choices.length)
-console.log(getComputerChoice());
+
+
+const computerSelection = getComputerChoice();
 
 function oneRound(playerSelection,computerSelection) {
-     if(playerSelection == choices[0] && computerSelection == choices[1]){
+     
+
+     if(playerSelection == choices[0] && computerSelection === choices[1]){
           return ("Paper beats Rock, You Lose!");
      }
 
-          else if(playerSelection == choices[0] && computerSelection == choices[2]){
+          else if(playerSelection == choices[0] && computerSelection === choices[2]){
           return ("Rock beats Scissors, You Win!")
      }
-          else if(playerSelection == choices[1] && computerSelection == choices[0]){
+          else if(playerSelection == choices[1] && computerSelection === choices[0]){
           return ("Paper beats Rock, You Win!")
      }
-          else if(playerSelection == choices[1] && computerSelection == choices[2]){
+          else if(playerSelection == choices[1] && computerSelection === choices[2]){
           return ("Scissor beats Paper, You Lose!")
      }
-          else if(playerSelection == choices[2] && computerSelection == choices[0]){
+          else if(playerSelection == choices[2] && computerSelection === choices[0]){
           return ("Rock beats Scissor, You Lose!")
      
      }
-          else if(playerSelection == choices[2] && computerSelection == choices[1]){
+          else if(playerSelection == choices[2] && computerSelection === choices[1]){
           return ("Scissor beats Paper, You Win!")
      
      }
+     else if(playerSelection == choices[2] && computerSelection === choices[2]){
+          return ("Its a Draw!")
+     
+     }
+
           else {
           return error 
      }
 
 }
+console.log(computerSelection);
+console.log(oneRound("Scissor",computerSelection));
