@@ -3,7 +3,8 @@ const choices = ["Rock", "Paper", "Scissor"];
 function getComputerChoice() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
-computerSelection = getComputerChoice()
+const computerSelection = getComputerChoice();
+const playerSelection = prompt('Enter Selection');
 
 function oneRound(playerSelection, computerSelection) {
      
